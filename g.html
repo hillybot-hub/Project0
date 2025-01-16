@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout with Header, Sidebar, and Page Selection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            grid-template-columns: 250px 1fr;
+            height: 100vh;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        aside {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #ccc;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Page Layout Example
+    </header>
+
+    <aside>
+        <ul>
+            <li data-page="F.html">Page 1</li>
+            <li data-page="d.html">Page 2</li>
+            <li data-page="c.html">Page 3</li>
+            <li data-page="b.html">Page 4</li>
+            <li data-page="page5.html">Page 5</li>
+        </ul>
+    </aside>
+
+    <main id="mainContent">
+        <iframe id="pageIframe" src="page1.html"></iframe>
+    </main>
+
+    <script>
+        const pageLinks = document.querySelectorAll('aside li');
+        const pageIframe = document.getElementById('pageIframe');
+
+        pageLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const selectedPage = link.getAttribute('data-page');
+                pageIframe.src = selectedPage;
+            });
+        });
+    </script>
+
+</body>
+</html>

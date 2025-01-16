@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="weather css.css">
+</head>
+<body>
+  <div class="weather-container">
+    <!-- Weather Icon positioned at the top-left -->
+    <div class="weather-icon">
+      <img id="weather-icon" src="cloud-sun.png" alt="Weather Icon" style="display: none;">
+    </div>
+    <!-- Weather Info positioned at the bottom-left -->
+    <div class="weather-info">
+      <h1 class="temperature" id="temperature" style="display: none;">32°C</h1>
+      <h2 class="location" id="location" style="display: none;">Location</h2>
+      <p class="condition" id="condition" style="display: none;">Condition</p>
+      <p class="details" id="details" style="display: none;">Details</p>
+      <p class="humidity" id="humidity" style="display: none;">Humidity: 64%</p>
+      <p class="wind" id="wind" style="display: none;">Wind: 20.2 km/h</p>
+    </div>
+
+    
+    <div class ="weather-search">
+      <input type="text" id="search-box" placeholder="Search here"></br>
+      <button id="search-button">Search</button>
+      <div class="recent-search       "></br>
+        <h3 style="color: rgb(110, 169, 159);">  Recent Search </h3>
+        <ul style="width:fit-content;" id="recent-search-list">
+            <!-- Recent searches will be added dynamically here -->
+          </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="weather .js"></script>
+</body>
+</html>

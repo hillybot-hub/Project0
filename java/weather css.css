@@ -1,0 +1,165 @@
+/* Basic page reset and setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-image: url('https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?cs=srgb&dl=pexels-jplenio-1118873.jpg&fm=jpg'); /* Background image URL */
+    background-size: cover; /* Make the background image cover the entire screen */
+    background-position: center; /* Center the background image */
+  }
+  
+  /* Container to wrap all content */
+  .weather-container {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Weather icon (top left) */
+  .weather-icon {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 1; /* Ensures the icon is always on top */
+  }
+  
+  .weather-icon img {
+    width: 100px; /* Adjust the size of the icon */
+    height: 100px;
+  }
+  
+  /* Weather info (bottom left) */
+  .weather-info {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  /* Weather info elements styling */
+  .weather-info h1,
+  .weather-info h2,
+  .weather-info p {
+    margin: 5px 0;
+  }
+  
+  .weather-info .temperature {
+    font-size: 36px;
+  }
+  
+  .weather-info .location {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .weather-info .condition {
+    font-size: 18px;
+  }
+  
+  .weather-info .humidity,
+  .weather-info .wind {
+    font-size: 16px;
+  }
+  
+  .weather-info .details {
+    font-size: 14px;
+    color: #ddd;
+  }
+  
+  /* Fullscreen search container with dark overlay */
+  .weather-search {
+    position: absolute;
+    top: 0; /* Ensures the container hugs the top */
+    right: 0; /* Aligns the container to the right side of the screen */
+    width: 300px; /* You can adjust the width as needed */
+    height: 100%; /* Fullscreen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?cs=srgb&dl=pexels-jplenio-1118873.jpg&fm=jpg'); /* Same background image */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken; /* Darkens the background */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 0; /* Behind the weather info */
+    padding: 20px; /* Optional padding for better appearance */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+  }
+  
+  /* Input styling (transparent) */
+  .weather-search input {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 50px; /* Add a margin to move the input box down */
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners for input */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Light border */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text color */
+  }
+  
+  .weather-search input:focus {
+    outline: none;
+    border: 2px solid #4CAF50; /* Green border on focus */
+  }
+  
+  /* Button styling (white) */
+  .weather-search button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: white; /* White background */
+    color: #333; /* Dark text color for contrast */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .weather-search button:hover {
+    background-color: #f1f1f1; /* Slightly darker on hover */
+  }
+  
+  /* Recent search list styling */
+  .recent-search ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y:visible;
+    width: 100%; /* Ensure it spans the entire width of the container */
+  }
+  
+  .recent-search li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for each item */
+    color: white; /* White text color */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%; /* Make sure it spans the full width */
+  }
+  
+  .recent-search li:hover {
+    background-color: rgba(243, 229, 229, 0.7); /* Darken on hover */
+  }
+  
+  /* Add spacing and dark divider */
+  .recent-search li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light white border between items */
+  }
+  

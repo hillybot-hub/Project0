@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f4f8; color: #333; margin: 0; padding: 0;">
+
+    <h1 style="text-align: center; font-size: 36px; color: #0044cc; margin-top: 40px;">Student Registration</h1>
+
+    <div style="max-width: 800px; margin: 20px auto; padding: 40px; background-color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div style="background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/minimalist-christmas-background-free-image.jpeg?w=1024&quality=50'); background-size: cover; background-position: center; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+            <form style="">
+                <label for="Name" style="font-size: 1.1em; font-weight: bold; margin-bottom: 8px; display: block;">Name:</label>
+                <input type="text" id="Name" name="Name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; margin: 10px 0 20px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 1em; background-color: #f9f9f9;">
+
+                <label for="ROLL" style="font-size: 1.1em; font-weight: bold; margin-bottom: 8px; display: block;">Roll Number:</label>
+                <input type="text" id="ROLL" name="ROLL" placeholder="Enter your roll number" required style="width: 100%; padding: 12px; margin: 10px 0 20px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 1em; background-color: #f9f9f9;">
+
+                <label for="ADDRESS" style="font-size: 1.1em; font-weight: bold; margin-bottom: 8px; display: block;">Address:</label>
+                <input type="text" id="ADDRESS" name="ADDRESS" placeholder="Enter your address" required style="width: 100%; padding: 12px; margin: 10px 0 20px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 1em; background-color: #f9f9f9;">
+
+                <div style="margin: 10px 0;">
+                    <label style="font-size: 1.1em; font-weight: bold;">Gender:</label><br>
+                    <input type="radio" id="male" name="GENDER" value="Male" required> <label for="male" style="font-size: 1em;">Male</label>
+                    <input type="radio" id="female" name="GENDER" value="Female"> <label for="female" style="font-size: 1em;">Female</label>
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <label style="font-size: 1.1em; font-weight:bold;">Preferred Subject:</label><br>
+                    <input type="radio" id="math" name="Subject" value="Math"> <label for="math" style="font-size: 1em;">Math</label>
+                    <input type="radio" id="science" name="Subject" value="Science"> <label for="science" style="font-size: 1em;">Science</label>
+                    <input type="radio" id="social" name="Subject" value="Social"> <label for="social" style="font-size: 1em;">Social Studies</label>
+                    <input type="radio" id="account" name="Subject" value="Account"> <label for="account" style="font-size: 1em;">Accounts</label>
+                </div>
+
+                <label for="class" style="font-size: 1.1em; font-weight: bold;">Choose Class:</label>
+                <select id="class" name="class" required style="width: 100%; padding: 12px; margin: 10px 0 20px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 1em; background-color: #f9f9f9;">
+                    <option value="10">Class 10</option>
+                    <option value="9">Class 9</option>
+                    <option value="8">Class 8</option>
+                    <option value="7">Class 7</option>
+                </select>
+
+                <label for="PHOTO" style="font-size: 1.1em; font-weight: bold; margin-bottom: 8px;">Upload Photo:</label>
+                <input type="file" id="PHOTO" name="PHOTO" style="width: 100%; padding: 12px; margin: 10px 0 20px 0; border-radius: 8px; border: 1px solid #ccc; background-color: #f9f9f9;">
+
+                <div style="margin: 10px 0;">
+                    <label style="font-size: 1.1em; font-weight: bold;">Location:</label><br>
+                    <input type="checkbox" id="inside_valley" name="LOCATION" value="INSIDE VALLEY"> <label for="inside_valley" style="font-size: 1em;">Inside Valley</label>
+                    <input type="checkbox" id="outside_valley" name="LOCATION" value="OUTSIDE VALLEY"> <label for="outside_valley" style="font-size: 1em;">Outside Valley</label>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit" style="padding: 12px 20px; background-color: #0044cc; color: white; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer; width: 50%; transition: background-color 0.3s ease;">
+                        Submit Registration
+                    </button>
+                </div>
+
+                <a href="F.html" target="_blank" style="display: block; text-align: center; margin-top: 20px; font-size: 1.1em; text-decoration: none; color: #0044cc;">
+                    Go Back to Portal
+                </a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
